@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import { ReactScan } from "@/providers/react-scan";
 import { ThemeProvider } from "@/providers/theme-provider";
 
-const geistSans = Geist({
+const vazirmatn = Vazirmatn({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -28,7 +23,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <ReactScan />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        dir="rtl"
+        className={`${vazirmatn.variable} antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
