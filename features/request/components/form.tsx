@@ -135,9 +135,9 @@ export function RequestForm() {
                     type="submit"
                     className="bg-linear-to-b to-[#B50909] from-[#C91B1C] px-16 py-8 text-md relative"
                     size="lg"
-                    disabled={isSubmitting}
+                    loading={isSubmitting}
                   >
-                    {isSubmitting ? SUBMITTING_BUTTON_TEXT : SUBMIT_BUTTON_TEXT}
+                    {SUBMIT_BUTTON_TEXT}
                   </Button>
                 </Field>
               </FieldGroup>
